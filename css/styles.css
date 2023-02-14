@@ -1,0 +1,884 @@
+/* ============================================================== CSS-VARIABLES ==================================================================== */
+:root {
+  --main-text-color: #434455;
+  --main-titles-color: #2e2f42;
+  --project-description-color: #f4f4fd;
+  --accent-color: #404bbf;
+  --signup-main-color: #ffffff;
+  --borders-main-color: #e7e9fc;
+  --active-links-color: #4d5ae5;
+
+  --advantage-icons-bg-color: #f4f4fd;
+  --social-media-icons-color: #f4f4fd;
+  --social-media-icons-bg-color: #4d5ae5;
+  --customer-icons-main-color: #8e8f99;
+  --checkmack-icon-color: #f4f4fd;
+
+  --main-background-color: #ffffff;
+  --modal-bg-color: #fcfcfc;
+  --backdrop-color: rgba(46, 47, 66, 0.4);
+  --main-overlay-color: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --project-overlay-color: #4d5ae5;
+
+  --input-border-color: rgba(33, 33, 33, 0.2);
+  --input-text-color: rgba(117, 117, 117, 0.5);
+  --hovered-input-color: #4d5ae5;
+  --input-title-color: #8e8f99;
+  --basic-input-font-size: 12px;
+  --checkbox-border-color: #2e2f42;
+  --checkbox-name-color: #757575;
+
+  --logo-ivariable-part-color: #4d5ae5;
+  --logo-light-part-color: #f4f4fd;
+  --logo-dark-part-color: #2e2f42;
+
+  --hero-titles-color: #ffffff;
+
+  --buttons-titles-color: #4d5ae5;
+  --buttons-background-color: #e7e9fc;
+  --buttons-hover-color: #ffffff;
+
+  --dark-sections-color: #f4f4fd;
+  --hero-and-footer-background-color: #2e2f42;
+
+  --footer-text-color: #e7e9fc;
+  --footer-icons-bg-color: #434455;
+  --footer-icons-hover-bg: #31d0aa;
+}
+/* ==================================================== REMOVERS OF PREDEFINED TAG PROPERTIES =================================================== */
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: transparent;
+}
+
+/* ==================================================================== BODY ===================================================================== */
+body {
+  font-family: 'Roboto', sans-serif;
+  /* font-weight: 400;                                                       ====> basic paragraph font-weight, predefined by a browser by default */
+  /* font-size: 16px;                                                        ====> basic paragraph font-size, predefined by a browser by default */
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  background-color: var(--main-background-color);
+}
+/* ================================================================= COMPONENTS ================================================================== */
+
+/*  ------ [BASIC CONTAINER] ------ */
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*  --------- [BASIC BUTTON] --------- */
+
+.basic-button {
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--hero-titles-color);
+  background-color: var(--buttons-titles-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  display: block;
+  margin: 0 auto;
+  min-width: 170px;
+  padding: 16px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.basic-button:hover,
+.basic-button:focus {
+  background-color: var(--accent-color);
+}
+
+/*  -------- [WEB-STUDIO LOGO] ---------- */
+
+.logo-invariable-part,
+.logo-dark-part,
+.logo-light-part {
+  font-family: 'Raleway', sans-serif;
+  /* font-weight: 800;                                                                                             ====> the only pre-connected font of the above-mentioned font-family*/
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.logo-invariable-part {
+  color: var(--logo-ivariable-part-color);
+}
+
+.logo-dark-part {
+  color: var(--logo-dark-part-color);
+}
+
+.logo-light-part {
+  color: var(--logo-light-part-color);
+}
+
+/* --------------- [SECTION] -------------- */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.dark-theme-section {
+  background-color: var(--dark-sections-color);
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-transform: capitalize;
+  color: var(--main-titles-color);
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+/*  --------- [SOCIAL NETWORKS ICONS] ---------- */
+
+.social-network-icon {
+  fill: var(--social-media-icons-color);
+}
+
+/*  --------- [SPECIAL CLASS FOR HIDING] ---------- */
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* ===================================================================== HEADER ====================================================================== */
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--borders-main-color);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.header-container {
+  display: flex;
+}
+
+.header-navigation {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  margin-left: 76px;
+  gap: 40px;
+}
+
+.menu-link {
+  font-weight: 500;
+  color: var(--main-titles-color);
+  /* Розширення зони кліку */
+  padding-top: 24px;
+  padding-bottom: 28px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+}
+
+.menu-current-page {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.menu-current-page::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+.address {
+  margin-left: auto;
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
+}
+
+.contact-link {
+  font-style: normal;
+  color: var(--main-text-color);
+  /* Розширення зони кліку */
+  padding-top: 24px;
+  padding-bottom: 28px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
+/* ======================================================================== MAIN PAGE / HERO SECTION ========================================================================= */
+
+.hero-section {
+  background-color: var(--hero-and-footer-background-color);
+  background-image: var(--main-overlay-color), url(../images/hero-bg-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  max-width: 1440px;
+}
+
+.hero-title {
+  /* font-weight: 700;                                                                                            ====> basic <h> font-weight (bold), predefined by a browser by default */
+  font-size: 56px;
+  line-height: 1.07;
+  color: var(--hero-titles-color);
+  margin-top: 0;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+
+/* ====================================================================== MAIN PAGE / ADVANTAGES SECTION ======================================================================= */
+
+.advantage-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.advantage-item {
+  width: calc((100% - 3 * 24px) / 4);
+}
+
+.advantage-image {
+  background-color: var(--advantage-icons-bg-color);
+
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
+.advantage-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--main-titles-color);
+
+  margin-bottom: 8px;
+}
+
+.advantage-description {
+  color: var(--main-text-color);
+}
+
+/* ====================================================================== MAIN PAGE / SERVICES SECTION ======================================================================= */
+
+.services-section {
+  padding-top: 0;
+  padding-bottom: 120px;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.service-item {
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+/* ====================================================================== MAIN PAGE / OUR TEAM SECTION ======================================================================= */
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-member-card {
+  width: calc((100% - 3 * 24px) / 4);
+  background-color: var(--main-background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-member-data {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.team-member-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main-titles-color);
+  margin-bottom: 8px;
+}
+
+.team-member-position {
+  color: var(--main-text-color);
+  margin-bottom: 8px;
+}
+
+.team-member-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-member-media-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-member-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--social-media-icons-bg-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-member-media-link:is(:hover, :focus) {
+  background-color: var(--accent-color);
+}
+
+/* ====================================================================== MAIN PAGE / CUSTOMERS SECTION ======================================================================= */
+
+.customers-section {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customer-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.customer-item {
+  width: calc((100% - 5 * 24px) / 6);
+  height: 88px;
+}
+
+.customer-company-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 16px 32px;
+  border: 1px solid var(--customer-icons-main-color);
+  border-radius: 4px;
+  color: var(--customer-icons-main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-company-link:hover,
+.customer-company-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.customer-company-icon {
+  fill: currentColor;
+}
+
+/* ====================================================================== PORTFOLIO PAGE / PORTFOLIO SECTION ======================================================================= */
+
+.portfolio-section {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+/*  ------------------ [PORTFOLIO PROJECTS FILTER] ------------------ */
+
+.project-category-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+
+.portfolio-button {
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--buttons-titles-color);
+  background-color: var(--buttons-background-color);
+  border: 1px solid var(--borders-main-color);
+  padding: 12px 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-button:focus,
+.portfolio-button:hover {
+  color: var(--buttons-hover-color);
+  background-color: var(--accent-color);
+  border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/*  --------------------------------- [POTFOLIO PROJECT SET] --------------------------------- */
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+.project-card {
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+.project-card-link {
+  display: block;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.project-card-link:is(:hover, :focus) .project-description {
+  transform: translateY(0%);
+}
+
+.project-card-link:is(:hover, :focus) .project-data {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.project-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-description {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+
+  width: 100%;
+  height: 100%;
+  padding: 40px 32px;
+
+  line-height: 1.5;
+  color: var(--project-description-color);
+  background-color: var(--project-overlay-color);
+}
+
+.project-data {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border: 1px solid var(--borders-main-color);
+  border-top: none;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main-titles-color);
+  margin-bottom: 8px;
+}
+
+.project-subtitle {
+  color: var(--main-text-color);
+}
+
+/* ====================================================================== FOOTER ======================================================================= */
+
+.footer {
+  background-color: var(--hero-and-footer-background-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+/*  ------------------- [FOOTER LEFT PART] ------------------ */
+
+.left-footer-part-container {
+  margin-right: 120px;
+}
+
+.footer-text {
+  color: var(--footer-text-color);
+  max-width: 265px;
+  margin-top: 16px;
+}
+
+/*  ------------------ [FOOTER MEDIA SET] ------------------ */
+
+.footer-media-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-media-list-title,
+.footer-subscription-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: var(--footer-text-color);
+}
+
+.footer-media-item {
+  width: 40px;
+  height: 40px;
+}
+
+.footer-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--footer-icons-bg-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-media-link:hover,
+.footer-media-link:focus {
+  background-color: var(--footer-icons-hover-bg);
+}
+
+/*  ------------------ [FOOTER SIGN-UP FORM] ------------------ */
+
+.footer-subscription-field {
+  margin-left: auto;
+}
+
+.footer-subscription-form {
+  display: flex;
+  gap: 24px;
+}
+
+.signup-input {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: var(--basic-input-font-size);
+  line-height: 2;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--signup-main-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.signup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  gap: 16px;
+
+  background-color: var(--buttons-titles-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.signup-button:hover,
+.signup-button:focus {
+  background-color: var(--accent-color);
+}
+
+.signup-button-title {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--signup-main-color);
+}
+
+.signup-icon {
+  fill: var(--signup-main-color);
+}
+
+/* ======================================================================== MODAL WINDOW ========================================================================= */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 1250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--backdrop-color);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  width: 408px;
+  min-height: 584px;
+  padding: 24px;
+
+  background-color: var(--modal-bg-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop.is-hidden .modal-window {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/*  ------------------------ [MODAL CLOSING BUTTON] ------------------------ */
+
+.close-modal-btn {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: block;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  color: #000000;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+.close-modal-icon {
+  fill: currentColor;
+}
+
+/*  ---------------- [DATA ENTRY FORM] ---------------- */
+
+.modal-form-title {
+  margin-top: 24px;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  text-align: center;
+  color: var(--main-titles-color);
+}
+
+/*  ------------------ [MODAL INPUTS] ------------------ */
+
+.modal-input-field {
+  margin-bottom: 8px;
+}
+
+.modal-input-line-wrapper {
+  position: relative;
+}
+
+.modal-input-line {
+  width: 100%;
+  height: 40px;
+  padding: 11px 38px;
+
+  font-size: var(--basic-input-font-size);
+  line-height: 1.33;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input-line:is(:hover, :focus),
+.modal-comment-area:is(:hover, :focus) {
+  border-color: var(--hovered-input-color);
+}
+
+.modal-input-line:is(:hover, :focus) + .modal-input-icon {
+  fill: var(--hovered-input-color);
+}
+
+.modal-input-title {
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--basic-input-font-size);
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--input-title-color);
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*  ------------------ [MODAL COMMENT FIELD] ------------------ */
+
+.modal-comment-field {
+  margin-bottom: 16px;
+}
+
+.modal-comment-area {
+  width: 100%;
+  height: 120px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 8px;
+
+  font-size: var(--basic-input-font-size);
+  line-height: 1.33;
+  border: 1px solid var(--input-border-color);
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
+}
+
+.modal-comment-area::placeholder {
+  font-size: var(--basic-input-font-size);
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--input-text-color);
+}
+
+/*  ------------------ [MODAL CHECKBOX] ------------------ */
+
+.modal-checkbox-field {
+  margin-bottom: 24px;
+}
+
+.checkbox-area {
+  display: flex;
+  font-size: var(--basic-input-font-size);
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--checkbox-name-color);
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  border: 1.25px solid var(--checkbox-border-color);
+  border-radius: 2px;
+  fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:focus + .checkbox-area .custom-checkbox {
+  outline: 2px solid var(--accent-color);
+}
+
+.custom-checkbox:hover {
+  outline: 2px solid var(--accent-color);
+}
+
+.checkbox-input:checked + .checkbox-area .custom-checkbox {
+  background-color: var(--accent-color);
+  border: none;
+  fill: var(--checkmack-icon-color);
+}
+
+.privacy-policy-link {
+  color: var(--active-links-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.privacy-policy-link:hover,
+.privacy-policy-link:focus {
+  color: red;
+}
