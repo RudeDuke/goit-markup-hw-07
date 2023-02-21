@@ -1,5 +1,6 @@
 @media screen and (min-width: 768px) {
-  .container {
+  .container,
+  .header-container {
     max-width: 768px;
   }
 
@@ -9,6 +10,10 @@
     max-width: 552px;
   }
 
+  .filter-container {
+    max-width: none;
+  }
+
   .footer-container {
     column-gap: 16px;
     row-gap: 72px;
@@ -16,16 +21,11 @@
     justify-content: left;
     flex-direction: row;
   }
-
-  .filter-container {
-    max-width: none;
-  }
-
   /* ================================================================== MODAL WINDOW =================================================================== */
 
   .modal-window {
-    min-width: 408px;
-    min-height: 586px;
+    max-height: 586px;
+    width: 408px;
   }
 
   /* ----------------------------------------------------------------- HEADER MOBILE MENU ------------------------------------------------------------ */
@@ -140,6 +140,21 @@
 
   .advantage-item {
     width: calc((100% - 24px) / 2);
+  }
+
+  .advantage-title {
+    text-align: left;
+  }
+
+  .advantage-description {
+    text-align: left;
+  }
+
+  /* ================================================================== MAIN PAGE / SERVICES SECTION =================================================================== */
+
+  .services-section {
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
 
   /* ==================================================================== MAIN PAGE / TEAM SECTION ===================================================================== */
