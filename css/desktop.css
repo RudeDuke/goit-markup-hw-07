@@ -72,6 +72,8 @@
 
   .services-section {
     display: block;
+    padding-top: 0;
+    padding-bottom: 120px;
   }
 
   .service-list {
