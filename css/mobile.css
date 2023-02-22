@@ -17,11 +17,14 @@
     height: 586px;
     max-width: 408px;
 
-    top: 100px;
+    top: 40px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
   }
 
+.backdrop.is-hidden .modal-window {
+  transform: translateX(-50%) scale(0);
+}
   .modal-checkbox-field {
     margin-bottom: 24px;
   }

@@ -10,6 +10,11 @@
     max-width: 552px;
   }
 
+.customers-container,
+.footer-container {
+  padding: 0;
+  }
+
   .filter-container {
     max-width: none;
   }
@@ -146,15 +151,11 @@
     text-align: left;
   }
 
-  .advantage-description {
-    text-align: left;
-  }
-
   /* ================================================================== MAIN PAGE / SERVICES SECTION =================================================================== */
 
   .services-section {
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
   /* ==================================================================== MAIN PAGE / TEAM SECTION ===================================================================== */

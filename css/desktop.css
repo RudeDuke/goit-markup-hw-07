@@ -71,9 +71,7 @@
   /* ================================================================== MAIN PAGE / SERVICES SECTION =================================================================== */
 
   .services-section {
-    display: inline;
-    padding-top: 0;
-    padding-bottom: 120px;
+    display: block;
   }
 
   .service-list {
@@ -101,6 +99,7 @@
 
   .advantage-title {
     font-size: 20px;
+    font-weight: 500;
     line-height: 1.2;
   }
 
