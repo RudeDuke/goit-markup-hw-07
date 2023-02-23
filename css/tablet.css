@@ -189,6 +189,7 @@
   .project-category-list {
     flex-wrap: nowrap;
     justify-content: center;
+    max-width: 100%;
   }
 
   .portfolio-button {

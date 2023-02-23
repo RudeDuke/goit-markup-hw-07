@@ -81,17 +81,17 @@ button {
   border: transparent;
 }
 
-/* ==================================================================== BODY ===================================================================== */
+/* ==================================================================== BODY ==================================================================== */
 body {
   font-family: 'Roboto', sans-serif;
-  /* font-weight: 400;                                                       ====> basic paragraph font-weight, predefined by a browser by default */
-  /* font-size: 16px;                                                        ====> basic paragraph font-size, predefined by a browser by default */
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   background-color: var(--main-background-color);
 }
-/* ================================================================= COMPONENTS ================================================================== */
+
+
+/* ///////////////////////////////////////////////////////////////// COMPONENTS ///////////////////////////////////////////////////////////////// */
 
 /* -------------------------------------------------- [SPECIAL CLASSES FOR HIDING & BLOCKING] ---------------------------------------------------- */
 
@@ -142,10 +142,6 @@ padding: 0 16px;
 margin: 0 auto;
 }
 
-.filter-container {
-  max-width: 310px;
-}
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -181,13 +177,12 @@ margin: 0 auto;
   background-color: var(--accent-color);
 }
 
-/*  --------------------------------------------------------------- [WEB-STUDIO LOGO] ----------------------------------------------------------------- */
+/*  ------------------------------------------------------------------ [LOGO] -------------------------------------------------------------------- */
 
 .logo-invariable-part,
 .logo-dark-part,
 .logo-light-part {
   font-family: 'Raleway', sans-serif;
-  /* font-weight: 800;                                                              ====> the only pre-connected font of the above-mentioned font-family*/
   font-size: 18px;
   line-height: 1.33;
   letter-spacing: 0.03em;
@@ -206,7 +201,7 @@ margin: 0 auto;
   color: var(--logo-light-part-color);
 }
 
-/* --------------------------------------------------------------- [SECTION BASIC STYLE] -------------------------------------------------------------- */
+/* -------------------------------------------------------------- [SECTION BASIC STYLE] ------------------------------------------------------------- */
 
 .section {
   padding-top: 96px;
@@ -222,13 +217,13 @@ margin: 0 auto;
   text-align: center;
 }
 
-/*  -------------------------------------------------------------- [SOCIAL NETWORKS ICONS] -------------------------------------------------------------- */
+/*  -------------------------------------------------------------- [SOCIAL NETWORKS ICONS] ------------------------------------------------------------ */
 
 .social-network-icon {
   fill: var(--social-media-icons-color);
 }
 
-/* ===================================================================== [HEADER] ====================================================================== */
+/* //////////////////////////////////////////////////////////////////// [HEADER] \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 .header {
   border-bottom: 1px solid var(--borders-main-color);
@@ -401,7 +396,7 @@ margin: 0 auto;
   margin-right: auto;
 }
 
-/* ================================================================= MAIN PAGE / ADVANTAGES SECTION ================================================================== */
+/* ================================================================ MAIN PAGE / [ADVANTAGES SECTION] ================================================================= */
 
 .advantage-list {
   display: flex;
@@ -430,15 +425,16 @@ margin: 0 auto;
 .advantage-description {
   color: var(--main-text-color);
   font-weight: 500;
-  text-align: justify;
+  text-align: left;
 }
 
-/* ================================================================== MAIN PAGE / SERVICES SECTION =================================================================== */
+/* ================================================================= MAIN PAGE / [SERVICES SECTION] ================================================================== */
 
 .services-section {
   display: none;
 }
-/* ==================================================================== MAIN PAGE / TEAM SECTION ===================================================================== */
+
+/* =================================================================== MAIN PAGE / [TEAM SECTION] ==================================================================== */
 .team-section {
   padding-top: 96px;
   padding-bottom: 128px;
@@ -502,7 +498,7 @@ margin: 0 auto;
   background-color: var(--accent-color);
 }
 
-/* ================================================================= MAIN PAGE / CUSTOMERS SECTION ================================================================== */
+/* ================================================================ MAIN PAGE / [CUSTOMERS SECTION] ================================================================= */
 
 .customers-section {
   padding-top: 96px;
@@ -550,14 +546,17 @@ margin: 0 auto;
   padding-bottom: 120px;
 }
 
-/*  ------------------ [PORTFOLIO PROJECTS FILTER] ------------------ */
+/*  ------------------ [PORTFOLIO PROJECT FILTER] ------------------ */
 
 .project-category-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 270px;
   column-gap: 24px;
   row-gap: 16px;
   margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portfolio-button {
@@ -671,13 +670,11 @@ margin: 0 auto;
   align-items: center;
   flex-direction: column;
   gap: 16px;
-  /* margin-right: 120px; */
 }
 
 .footer-text {
   color: var(--footer-text-color);
   max-width: 265px;
-  /* margin-top: 16px; */
 }
 
 /*  ------------------ [FOOTER MEDIA SET] ------------------ */
